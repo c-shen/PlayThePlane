@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		610290571B8E977600D0CEE9 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 610290561B8E977600D0CEE9 /* iAd.framework */; };
+		6102905A1B8EA32F00D0CEE9 /* iAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610290591B8EA32F00D0CEE9 /* iAdViewController.swift */; };
+		6102905E1B9017B900D0CEE9 /* planeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6102905D1B9017B900D0CEE9 /* planeModel.swift */; };
+		6103CDF31B97192700741B44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6103CDF21B97192700741B44 /* LaunchScreen.storyboard */; };
+		61AA26FF1B8C4E4D00E9B7FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AA26FE1B8C4E4D00E9B7FD /* Assets.xcassets */; };
+		61AA270D1B8C4E4D00E9B7FD /* PlayThePlaneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA270C1B8C4E4D00E9B7FD /* PlayThePlaneTests.swift */; };
+		61AA27181B8C4E4D00E9B7FD /* PlayThePlaneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA27171B8C4E4D00E9B7FD /* PlayThePlaneUITests.swift */; };
+		61AA272C1B8C4F6600E9B7FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA27261B8C4F6600E9B7FD /* ViewController.swift */; };
+		61AA272D1B8C4F6600E9B7FD /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA27281B8C4F6600E9B7FD /* MainController.swift */; };
+		61AA272E1B8C4F6600E9B7FD /* MyPlaneCollectionViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA27291B8C4F6600E9B7FD /* MyPlaneCollectionViewControler.swift */; };
+		61AA272F1B8C4F6600E9B7FD /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA272B1B8C4F6600E9B7FD /* UIButton+Extension.swift */; };
+		61AA27311B8C4F7900E9B7FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA27301B8C4F7900E9B7FD /* AppDelegate.swift */; };
+		DC9CA079547109735E841858 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B349B7E64A6ED39F73C987 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61AA27091B8C4E4D00E9B7FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61AA26EC1B8C4E4D00E9B7FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61AA26F31B8C4E4D00E9B7FD;
+			remoteInfo = PlayThePlane;
+		};
+		61AA27141B8C4E4D00E9B7FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61AA26EC1B8C4E4D00E9B7FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61AA26F31B8C4E4D00E9B7FD;
+			remoteInfo = PlayThePlane;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03A68197543C6F4C56599B46 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		07784FC28195A34ACAD7EC6E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		610290561B8E977600D0CEE9 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		610290591B8EA32F00D0CEE9 /* iAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iAdViewController.swift; sourceTree = "<group>"; };
+		6102905D1B9017B900D0CEE9 /* planeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = planeModel.swift; sourceTree = "<group>"; };
+		6103CDF21B97192700741B44 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		61AA26F41B8C4E4D00E9B7FD /* PlayThePlane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayThePlane.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61AA26FE1B8C4E4D00E9B7FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		61AA27031B8C4E4D00E9B7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61AA27081B8C4E4D00E9B7FD /* PlayThePlaneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayThePlaneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61AA270C1B8C4E4D00E9B7FD /* PlayThePlaneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayThePlaneTests.swift; sourceTree = "<group>"; };
+		61AA270E1B8C4E4D00E9B7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61AA27131B8C4E4D00E9B7FD /* PlayThePlaneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayThePlaneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61AA27171B8C4E4D00E9B7FD /* PlayThePlaneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayThePlaneUITests.swift; sourceTree = "<group>"; };
+		61AA27191B8C4E4D00E9B7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61AA27261B8C4F6600E9B7FD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		61AA27281B8C4F6600E9B7FD /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		61AA27291B8C4F6600E9B7FD /* MyPlaneCollectionViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlaneCollectionViewControler.swift; sourceTree = "<group>"; };
+		61AA272B1B8C4F6600E9B7FD /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		61AA27301B8C4F7900E9B7FD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4B349B7E64A6ED39F73C987 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61AA26F11B8C4E4D00E9B7FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				610290571B8E977600D0CEE9 /* iAd.framework in Frameworks */,
+				DC9CA079547109735E841858 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61AA27051B8C4E4D00E9B7FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61AA27101B8C4E4D00E9B7FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		610290581B8EA23500D0CEE9 /* iAd */ = {
+			isa = PBXGroup;
+			children = (
+				610290591B8EA32F00D0CEE9 /* iAdViewController.swift */,
+			);
+			name = iAd;
+			sourceTree = "<group>";
+		};
+		6102905B1B900C4700D0CEE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6102905D1B9017B900D0CEE9 /* planeModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		61AA26EB1B8C4E4D00E9B7FD = {
+			isa = PBXGroup;
+			children = (
+				61AA26F61B8C4E4D00E9B7FD /* PlayThePlane */,
+				61AA270B1B8C4E4D00E9B7FD /* PlayThePlaneTests */,
+				61AA27161B8C4E4D00E9B7FD /* PlayThePlaneUITests */,
+				61AA26F51B8C4E4D00E9B7FD /* Products */,
+				A5C46BBAC3024D882664E3EE /* Pods */,
+				DFBA827C24F0CD69CCF22DB1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		61AA26F51B8C4E4D00E9B7FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61AA26F41B8C4E4D00E9B7FD /* PlayThePlane.app */,
+				61AA27081B8C4E4D00E9B7FD /* PlayThePlaneTests.xctest */,
+				61AA27131B8C4E4D00E9B7FD /* PlayThePlaneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61AA26F61B8C4E4D00E9B7FD /* PlayThePlane */ = {
+			isa = PBXGroup;
+			children = (
+				61AA27301B8C4F7900E9B7FD /* AppDelegate.swift */,
+				61AA27251B8C4F6600E9B7FD /* Home */,
+				61AA27271B8C4F6600E9B7FD /* Main */,
+				61AA272A1B8C4F6600E9B7FD /* Tools */,
+				61AA26FE1B8C4E4D00E9B7FD /* Assets.xcassets */,
+				61AA27031B8C4E4D00E9B7FD /* Info.plist */,
+			);
+			path = PlayThePlane;
+			sourceTree = "<group>";
+		};
+		61AA270B1B8C4E4D00E9B7FD /* PlayThePlaneTests */ = {
+			isa = PBXGroup;
+			children = (
+				61AA270C1B8C4E4D00E9B7FD /* PlayThePlaneTests.swift */,
+				61AA270E1B8C4E4D00E9B7FD /* Info.plist */,
+			);
+			path = PlayThePlaneTests;
+			sourceTree = "<group>";
+		};
+		61AA27161B8C4E4D00E9B7FD /* PlayThePlaneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				61AA27171B8C4E4D00E9B7FD /* PlayThePlaneUITests.swift */,
+				61AA27191B8C4E4D00E9B7FD /* Info.plist */,
+			);
+			path = PlayThePlaneUITests;
+			sourceTree = "<group>";
+		};
+		61AA27251B8C4F6600E9B7FD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				61AA27261B8C4F6600E9B7FD /* ViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		61AA27271B8C4F6600E9B7FD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6102905B1B900C4700D0CEE9 /* Model */,
+				610290581B8EA23500D0CEE9 /* iAd */,
+				61AA27281B8C4F6600E9B7FD /* MainController.swift */,
+				61AA27291B8C4F6600E9B7FD /* MyPlaneCollectionViewControler.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		61AA272A1B8C4F6600E9B7FD /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				6103CDF21B97192700741B44 /* LaunchScreen.storyboard */,
+				61AA272B1B8C4F6600E9B7FD /* UIButton+Extension.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		A5C46BBAC3024D882664E3EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03A68197543C6F4C56599B46 /* Pods.debug.xcconfig */,
+				07784FC28195A34ACAD7EC6E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DFBA827C24F0CD69CCF22DB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				610290561B8E977600D0CEE9 /* iAd.framework */,
+				F4B349B7E64A6ED39F73C987 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		61AA26F31B8C4E4D00E9B7FD /* PlayThePlane */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61AA271C1B8C4E4D00E9B7FD /* Build configuration list for PBXNativeTarget "PlayThePlane" */;
+			buildPhases = (
+				D06B87FD0ADF77BA4AF479B3 /* Check Pods Manifest.lock */,
+				61AA26F01B8C4E4D00E9B7FD /* Sources */,
+				61AA26F11B8C4E4D00E9B7FD /* Frameworks */,
+				61AA26F21B8C4E4D00E9B7FD /* Resources */,
+				5E44A7AE32F5518D4492078A /* Embed Pods Frameworks */,
+				DAA873B34E07138BA8576AE4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlayThePlane;
+			productName = PlayThePlane;
+			productReference = 61AA26F41B8C4E4D00E9B7FD /* PlayThePlane.app */;
+			productType = "com.apple.product-type.application";
+		};
+		61AA27071B8C4E4D00E9B7FD /* PlayThePlaneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61AA271F1B8C4E4D00E9B7FD /* Build configuration list for PBXNativeTarget "PlayThePlaneTests" */;
+			buildPhases = (
+				61AA27041B8C4E4D00E9B7FD /* Sources */,
+				61AA27051B8C4E4D00E9B7FD /* Frameworks */,
+				61AA27061B8C4E4D00E9B7FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61AA270A1B8C4E4D00E9B7FD /* PBXTargetDependency */,
+			);
+			name = PlayThePlaneTests;
+			productName = PlayThePlaneTests;
+			productReference = 61AA27081B8C4E4D00E9B7FD /* PlayThePlaneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		61AA27121B8C4E4D00E9B7FD /* PlayThePlaneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61AA27221B8C4E4D00E9B7FD /* Build configuration list for PBXNativeTarget "PlayThePlaneUITests" */;
+			buildPhases = (
+				61AA270F1B8C4E4D00E9B7FD /* Sources */,
+				61AA27101B8C4E4D00E9B7FD /* Frameworks */,
+				61AA27111B8C4E4D00E9B7FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61AA27151B8C4E4D00E9B7FD /* PBXTargetDependency */,
+			);
+			name = PlayThePlaneUITests;
+			productName = PlayThePlaneUITests;
+			productReference = 61AA27131B8C4E4D00E9B7FD /* PlayThePlaneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61AA26EC1B8C4E4D00E9B7FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = aiya;
+				TargetAttributes = {
+					61AA26F31B8C4E4D00E9B7FD = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = XBDKJE5AAT;
+					};
+					61AA27071B8C4E4D00E9B7FD = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = XBDKJE5AAT;
+						TestTargetID = 61AA26F31B8C4E4D00E9B7FD;
+					};
+					61AA27121B8C4E4D00E9B7FD = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = XBDKJE5AAT;
+						TestTargetID = 61AA26F31B8C4E4D00E9B7FD;
+					};
+				};
+			};
+			buildConfigurationList = 61AA26EF1B8C4E4D00E9B7FD /* Build configuration list for PBXProject "PlayThePlane" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 61AA26EB1B8C4E4D00E9B7FD;
+			productRefGroup = 61AA26F51B8C4E4D00E9B7FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61AA26F31B8C4E4D00E9B7FD /* PlayThePlane */,
+				61AA27071B8C4E4D00E9B7FD /* PlayThePlaneTests */,
+				61AA27121B8C4E4D00E9B7FD /* PlayThePlaneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61AA26F21B8C4E4D00E9B7FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61AA26FF1B8C4E4D00E9B7FD /* Assets.xcassets in Resources */,
+				6103CDF31B97192700741B44 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61AA27061B8C4E4D00E9B7FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61AA27111B8C4E4D00E9B7FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E44A7AE32F5518D4492078A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D06B87FD0ADF77BA4AF479B3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAA873B34E07138BA8576AE4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61AA26F01B8C4E4D00E9B7FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61AA272D1B8C4F6600E9B7FD /* MainController.swift in Sources */,
+				61AA272F1B8C4F6600E9B7FD /* UIButton+Extension.swift in Sources */,
+				61AA272E1B8C4F6600E9B7FD /* MyPlaneCollectionViewControler.swift in Sources */,
+				61AA27311B8C4F7900E9B7FD /* AppDelegate.swift in Sources */,
+				6102905E1B9017B900D0CEE9 /* planeModel.swift in Sources */,
+				61AA272C1B8C4F6600E9B7FD /* ViewController.swift in Sources */,
+				6102905A1B8EA32F00D0CEE9 /* iAdViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61AA27041B8C4E4D00E9B7FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61AA270D1B8C4E4D00E9B7FD /* PlayThePlaneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61AA270F1B8C4E4D00E9B7FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61AA27181B8C4E4D00E9B7FD /* PlayThePlaneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61AA270A1B8C4E4D00E9B7FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61AA26F31B8C4E4D00E9B7FD /* PlayThePlane */;
+			targetProxy = 61AA27091B8C4E4D00E9B7FD /* PBXContainerItemProxy */;
+		};
+		61AA27151B8C4E4D00E9B7FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61AA26F31B8C4E4D00E9B7FD /* PlayThePlane */;
+			targetProxy = 61AA27141B8C4E4D00E9B7FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		61AA271A1B8C4E4D00E9B7FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		61AA271B1B8C4E4D00E9B7FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		61AA271D1B8C4E4D00E9B7FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03A68197543C6F4C56599B46 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				INFOPLIST_FILE = PlayThePlane/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.PlayThePlane;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		61AA271E1B8C4E4D00E9B7FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07784FC28195A34ACAD7EC6E /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				INFOPLIST_FILE = PlayThePlane/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.PlayThePlane;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		61AA27201B8C4E4D00E9B7FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PlayThePlaneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.PlayThePlaneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlayThePlane.app/PlayThePlane";
+			};
+			name = Debug;
+		};
+		61AA27211B8C4E4D00E9B7FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PlayThePlaneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.PlayThePlaneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlayThePlane.app/PlayThePlane";
+			};
+			name = Release;
+		};
+		61AA27231B8C4E4D00E9B7FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PlayThePlaneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.PlayThePlaneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PlayThePlane;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		61AA27241B8C4E4D00E9B7FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PlayThePlaneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.PlayThePlaneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PlayThePlane;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61AA26EF1B8C4E4D00E9B7FD /* Build configuration list for PBXProject "PlayThePlane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61AA271A1B8C4E4D00E9B7FD /* Debug */,
+				61AA271B1B8C4E4D00E9B7FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61AA271C1B8C4E4D00E9B7FD /* Build configuration list for PBXNativeTarget "PlayThePlane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61AA271D1B8C4E4D00E9B7FD /* Debug */,
+				61AA271E1B8C4E4D00E9B7FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61AA271F1B8C4E4D00E9B7FD /* Build configuration list for PBXNativeTarget "PlayThePlaneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61AA27201B8C4E4D00E9B7FD /* Debug */,
+				61AA27211B8C4E4D00E9B7FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61AA27221B8C4E4D00E9B7FD /* Build configuration list for PBXNativeTarget "PlayThePlaneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61AA27231B8C4E4D00E9B7FD /* Debug */,
+				61AA27241B8C4E4D00E9B7FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 61AA26EC1B8C4E4D00E9B7FD /* Project object */;
+}
