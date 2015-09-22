@@ -20,8 +20,3 @@
 外挂级难度,游戏结束
 -----------------------------------  
 ![github](https://github.com/c-shen/PlayThePlane/blob/master/screenshot/4.png?raw=true "github")  
-
-
-###想点击某个图片进入一个网页,比如我想点击github的icorn然后再进入www.github.com  
-[![image]](http://www.github.com/)  
-[image]: http://github.com/github.png "github"  
