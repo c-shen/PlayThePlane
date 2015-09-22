@@ -7,28 +7,21 @@
   
 进入游戏 
 -----------------------------------  
-###只是显示图片  
-![github](http://github.com/unicorn.png "github")  
+![github](https://github.com/c-shen/PlayThePlane/blob/master/screenshot/1.png?raw=true "github")  
 
 单机选中飞机头部,再次垂直或水平选中一点确定飞机 
 -----------------------------------  
-###只是显示图片  
-![github](http://github.com/unicorn.png "github")  
+![github](https://github.com/c-shen/PlayThePlane/blob/master/screenshot/2.png?raw=true "github")  
 
 选择难度,点击确定
 -----------------------------------  
-###只是显示图片  
-![github](http://github.com/unicorn.png "github")  
+![github](https://github.com/c-shen/PlayThePlane/blob/master/screenshot/3.png?raw=true "github")  
 
 外挂级难度,游戏结束
 -----------------------------------  
-###只是显示图片  
-![github](http://github.com/unicorn.png "github")  
+![github](https://github.com/c-shen/PlayThePlane/blob/master/screenshot/4.png?raw=true "github")  
 
 
-###只是显示图片  
-![github](http://github.com/unicorn.png "github")  
-  
 ###想点击某个图片进入一个网页,比如我想点击github的icorn然后再进入www.github.com  
 [![image]](http://www.github.com/)  
 [image]: http://github.com/github.png "github"  
