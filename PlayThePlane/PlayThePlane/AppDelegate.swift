@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.rootViewController = ViewController()
         window?.makeKeyAndVisible()
+        
+        UMSocialData.setAppKey("55e5338f67e58e51ae0010da")
+        
         return true
     }
 
