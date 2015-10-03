@@ -8,11 +8,19 @@
 -----------------------------------  
 ![github](https://github.com/c-shen/PlayThePlane/blob/master/screenshot/1.png?raw=true "github")  
 
-单机选中飞机头部,再次垂直或水平选中一点确定飞机 
+单机选中第一点,第一点作为飞机头部位置,再次垂直或水平选中第二点确定飞机位置和方向,注意第一点和第二点一定要在一条线上,注意生成后的飞机一定不能重叠,或者超出屏幕.
 -----------------------------------  
 ![github](https://github.com/c-shen/PlayThePlane/blob/master/screenshot/2.png?raw=true "github")  
 
-选择难度,点击确定
+如果想删除之前画的飞机重新添加,请点击撤销键.
+-----------------------------------  
+![github](https://github.com/c-shen/PlayThePlane/blob/master/screenshot/2.png?raw=true "github")  
+
+选择难度,点击确定,根据自己实力选择难度,编辑完三架飞机后点击确定.
+-----------------------------------  
+![github](https://github.com/c-shen/PlayThePlane/blob/master/screenshot/3.png?raw=true "github")  
+
+点击左侧屏幕,对敌方飞机进行打击,击中机身和机尾后起火,黄色火焰.击中飞机头部显示紫色火焰.
 -----------------------------------  
 ![github](https://github.com/c-shen/PlayThePlane/blob/master/screenshot/3.png?raw=true "github")  
 
