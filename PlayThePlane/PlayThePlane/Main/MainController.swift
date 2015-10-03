@@ -98,44 +98,65 @@ class MainController: UIViewController {
     }
     
     @objc func backoutGame() {
-        enemyCollectionView.subviews.last?.removeFromSuperview()
-        if isMy {
-            if first != nil {
-                first = nil
-                let vc = view.subviews.last
-                vc?.removeFromSuperview()
-            } else {
-                switch plane {
-                case 2:
-                    for index in firstPlane {
+        
+        if plane != 1 {
+            enemyCollectionView.subviews.last?.removeFromSuperview()
+            if isMy {
+                if first != nil {
+                    first = nil
+                    let vc = view.subviews.last
+                    vc?.removeFromSuperview()
+                } 
+                    for index in planeArray {
                         (enemyCollectionView.cellForItemAtIndexPath(index) as! enemyCollectionViewCell).status = 0
                     }
-                    plane -= 1
-                    let myPlane = enemyCollectionView.subviews.last
-                    myPlane?.removeFromSuperview()
+                    
+                    for _ in 0...5 {
+                        let myPlane = enemyCollectionView.subviews.last
+                        if (myPlane?.isKindOfClass(UICollectionViewCell) == true) {
+                            break
+                        }
+                        myPlane?.removeFromSuperview()
+                    }
+                    plane = 1
+                    planeArray.removeAll()
                     firstPlane.removeAll()
-                case 3:
-                    for index in secondPlane {
-                        (enemyCollectionView.cellForItemAtIndexPath(index) as! enemyCollectionViewCell).status = 0
-                    }
-                    plane -= 1
-                    let myPlane = enemyCollectionView.subviews.last
-                    myPlane?.removeFromSuperview()
                     secondPlane.removeAll()
-                case 4:
-                    for index in thirdPlane {
-                        (enemyCollectionView.cellForItemAtIndexPath(index) as! enemyCollectionViewCell).status = 0
-                    }
-                    plane -= 1
-                    let myPlane = enemyCollectionView.subviews.last
-                    myPlane?.removeFromSuperview()
                     thirdPlane.removeAll()
-                default:0
-                }
-                planeArray.removeAll()
-                planeArray += firstPlane
-                planeArray += secondPlane
-                planeArray += thirdPlane
+                    
+//                    switch plane {
+//                    case 2:
+//                        for index in firstPlane {
+//                            (enemyCollectionView.cellForItemAtIndexPath(index) as! enemyCollectionViewCell).status = 0
+//                        }
+//                        plane -= 1
+//                        let myPlane = enemyCollectionView.subviews.last
+//                        myPlane?.removeFromSuperview()
+//                        firstPlane.removeAll()
+//                    case 3:
+//                        for index in secondPlane {
+//                            (enemyCollectionView.cellForItemAtIndexPath(index) as! enemyCollectionViewCell).status = 0
+//                        }
+//                        plane -= 1
+//                            let myPlane = enemyCollectionView.subviews.last
+//                            myPlane?.removeFromSuperview()
+//                        secondPlane.removeAll()
+//                    case 4:
+//                        for index in thirdPlane {
+//                            (enemyCollectionView.cellForItemAtIndexPath(index) as! enemyCollectionViewCell).status = 0
+//                        }
+//                        plane -= 1
+//                            let myPlane = enemyCollectionView.subviews.last
+//                            myPlane?.removeFromSuperview()
+//                        }
+//                        thirdPlane.removeAll()
+//                    default:0
+//                    }
+//                    plane = 1
+//                    planeArray += firstPlane
+//                    planeArray += secondPlane
+//                    planeArray += thirdPlane
+
             }
         }
     }
@@ -144,7 +165,6 @@ class MainController: UIViewController {
     @objc func playGame() {
         
         if planeArray.count > 32 {
-            
             contextIconView()
             view.userInteractionEnabled = false
             if isMy == true {
@@ -247,6 +267,10 @@ class MainController: UIViewController {
     
     
     private func contextIconView() {
+        selectDifficulty.userInteractionEnabled = false
+        backout.userInteractionEnabled = false
+        play.userInteractionEnabled = false
+        
         // 1. 开启一个图片的图形上下文
         UIGraphicsBeginImageContextWithOptions(enemyCollectionView.frame.size, false, 0.0)
         // 获取当前图形上下文
@@ -276,7 +300,7 @@ class MainController: UIViewController {
             
             }) { (_) -> Void in
                 self.view.userInteractionEnabled = true
-                self.isMyP.addMyPlane(self.firstPlane, secondPlane: self.secondPlane, thirdPlane: self.thirdPlane, planeImageView: iconView, myPlaneArray: self.planeArray)
+                self.isMyP.addMyPlane(self.firstPlane, secondPlane: self.secondPlane, thirdPlane: self.thirdPlane, planeImageView: iconView, myPlaneArray: self.planeArray, headArray : self.headArray)
                 self.isMyP.view.hidden = false
                 self.setupMyUI()
                 iconView.removeFromSuperview()
@@ -610,12 +634,16 @@ class MainController: UIViewController {
             result(true)
             return
         }
+//        
         isMyP.solitaireGame(difficulty, headArray: headArray)
     }
     
     
     private func clearAll() {
         
+        selectDifficulty.userInteractionEnabled = true
+        backout.userInteractionEnabled = true
+        play.userInteractionEnabled = true
         isMy = true
         WinInt = 0
         plane = 1
@@ -628,7 +656,7 @@ class MainController: UIViewController {
         enemyCollectionView.layer.contents = UIColor.clearColor()
         
         
-        for i in 1...79 {
+        for i in 0...80 {
             let index = NSIndexPath(forItem: i, inSection: 0)
             (enemyCollectionView.cellForItemAtIndexPath(index) as! enemyCollectionViewCell).status = 0
             (enemyCollectionView.cellForItemAtIndexPath(index) as! enemyCollectionViewCell).hit = 0
@@ -641,7 +669,6 @@ class MainController: UIViewController {
     private func setupUI() {
         
         let wm = UIScreen.mainScreen().bounds.width - wa
-        print(UIScreen.mainScreen().bounds)
         
         view.layer.contents = UIImage(named: "background")!.CGImage
         
@@ -692,13 +719,13 @@ class MainController: UIViewController {
         for i in 0...9 {
             let blackView: UIView = UIView()
             view.addSubview(blackView)
-            blackView.frame = CGRect(x: CGFloat(i) * wa / 9, y: 0, width: 0.5, height: wa)
+            blackView.frame = CGRect(x: CGFloat(i) * wa / 9, y: 0, width: 1, height: wa)
             blackView.backgroundColor = UIColor.blackColor()
         }
         for i in 0...9  {
             let blackView: UIView = UIView()
             view.addSubview(blackView)
-            blackView.frame = CGRect(x: 0, y: CGFloat(i) * wa / 9, width: wa, height: 0.5)
+            blackView.frame = CGRect(x: 0, y: CGFloat(i) * wa / 9, width: wa, height: 1)
             blackView.backgroundColor = UIColor.blackColor()
         }
         

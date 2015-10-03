@@ -10,7 +10,6 @@
 		610290571B8E977600D0CEE9 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 610290561B8E977600D0CEE9 /* iAd.framework */; };
 		6102905A1B8EA32F00D0CEE9 /* iAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610290591B8EA32F00D0CEE9 /* iAdViewController.swift */; };
 		6102905E1B9017B900D0CEE9 /* planeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6102905D1B9017B900D0CEE9 /* planeModel.swift */; };
-		6103CDF31B97192700741B44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6103CDF21B97192700741B44 /* LaunchScreen.storyboard */; };
 		616F2B071BB834B10091F076 /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 616F2AEC1BB834B10091F076 /* UMSocialLocalizable.strings */; settings = {ASSET_TAGS = (); }; };
 		616F2B081BB834B10091F076 /* libUMSocial_Sdk_4.2.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 616F2AFA1BB834B10091F076 /* libUMSocial_Sdk_4.2.3.a */; settings = {ASSET_TAGS = (); }; };
 		616F2B091BB834B10091F076 /* libUMSocial_Sdk_Comment_4.2.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 616F2AFB1BB834B10091F076 /* libUMSocial_Sdk_Comment_4.2.3.a */; settings = {ASSET_TAGS = (); }; };
@@ -31,6 +30,7 @@
 		616F2B221BB8370E0091F076 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616F2B211BB8370E0091F076 /* CoreTelephony.framework */; };
 		616F2B241BB837190091F076 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 616F2B231BB837190091F076 /* libstdc++.tbd */; };
 		616F2B261BB837270091F076 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 616F2B251BB837270091F076 /* libz.tbd */; };
+		619B37111BBD09540078E92E /* helpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619B37101BBD09540078E92E /* helpViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		61AA26FF1B8C4E4D00E9B7FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AA26FE1B8C4E4D00E9B7FD /* Assets.xcassets */; };
 		61AA270D1B8C4E4D00E9B7FD /* PlayThePlaneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA270C1B8C4E4D00E9B7FD /* PlayThePlaneTests.swift */; };
 		61AA27181B8C4E4D00E9B7FD /* PlayThePlaneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA27171B8C4E4D00E9B7FD /* PlayThePlaneUITests.swift */; };
@@ -65,7 +65,6 @@
 		610290561B8E977600D0CEE9 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		610290591B8EA32F00D0CEE9 /* iAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iAdViewController.swift; sourceTree = "<group>"; };
 		6102905D1B9017B900D0CEE9 /* planeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = planeModel.swift; sourceTree = "<group>"; };
-		6103CDF21B97192700741B44 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		616F2AED1BB834B10091F076 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UMSocialLocalizable.strings; sourceTree = "<group>"; };
 		616F2AEF1BB834B10091F076 /* UMSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocial.h; sourceTree = "<group>"; };
 		616F2AF01BB834B10091F076 /* UMSocialAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialAccountManager.h; sourceTree = "<group>"; };
@@ -99,6 +98,7 @@
 		616F2B211BB8370E0091F076 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		616F2B231BB837190091F076 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		616F2B251BB837270091F076 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		619B37101BBD09540078E92E /* helpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helpViewController.swift; sourceTree = "<group>"; };
 		61AA26F41B8C4E4D00E9B7FD /* PlayThePlane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayThePlane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AA26FE1B8C4E4D00E9B7FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61AA27031B8C4E4D00E9B7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -274,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				61AA27261B8C4F6600E9B7FD /* ViewController.swift */,
+				619B37101BBD09540078E92E /* helpViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -292,7 +293,6 @@
 		61AA272A1B8C4F6600E9B7FD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				6103CDF21B97192700741B44 /* LaunchScreen.storyboard */,
 				61AA272B1B8C4F6600E9B7FD /* UIButton+Extension.swift */,
 			);
 			path = Tools;
@@ -395,7 +395,7 @@
 				TargetAttributes = {
 					61AA26F31B8C4E4D00E9B7FD = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = XBDKJE5AAT;
+						DevelopmentTeam = 6B2D498M9X;
 					};
 					61AA27071B8C4E4D00E9B7FD = {
 						CreatedOnToolsVersion = 7.0;
@@ -438,7 +438,6 @@
 				616F2B0D1BB834B10091F076 /* UMShareEditViewController.xib in Resources */,
 				616F2B0C1BB834B10091F076 /* UMSCommentInputControlleriPad.xib in Resources */,
 				61AA26FF1B8C4E4D00E9B7FD /* Assets.xcassets in Resources */,
-				6103CDF31B97192700741B44 /* LaunchScreen.storyboard in Resources */,
 				616F2B0A1BB834B10091F076 /* UMSCommentDetailController.xib in Resources */,
 				616F2B101BB834B10091F076 /* UMSnsAccountViewController.xib in Resources */,
 				616F2B121BB834B10091F076 /* UMSocialSDKResourcesNew.bundle in Resources */,
@@ -522,6 +521,7 @@
 				61AA272D1B8C4F6600E9B7FD /* MainController.swift in Sources */,
 				61AA272F1B8C4F6600E9B7FD /* UIButton+Extension.swift in Sources */,
 				61AA272E1B8C4F6600E9B7FD /* MyPlaneCollectionViewControler.swift in Sources */,
+				619B37111BBD09540078E92E /* helpViewController.swift in Sources */,
 				61AA27311B8C4F7900E9B7FD /* AppDelegate.swift in Sources */,
 				6102905E1B9017B900D0CEE9 /* planeModel.swift in Sources */,
 				61AA272C1B8C4F6600E9B7FD /* ViewController.swift in Sources */,
@@ -590,6 +590,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: cshen@vip.qq.com (93EFGQDM89)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -634,6 +635,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: cshen@vip.qq.com (93EFGQDM89)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

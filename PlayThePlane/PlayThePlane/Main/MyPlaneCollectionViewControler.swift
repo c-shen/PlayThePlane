@@ -34,7 +34,7 @@ class MyPlaneCollectionViewControler: UICollectionViewController {
     }
     
     
-    func addMyPlane(firstPlane: [NSIndexPath], secondPlane: [NSIndexPath], thirdPlane: [NSIndexPath], planeImageView : UIImageView, myPlaneArray: [NSIndexPath]) {
+    func addMyPlane(firstPlane: [NSIndexPath], secondPlane: [NSIndexPath], thirdPlane: [NSIndexPath], planeImageView : UIImageView, myPlaneArray: [NSIndexPath], headArray : [NSIndexPath]) {
         
 //        for index in firstPlane {
 //            (self.collectionView!.cellForItemAtIndexPath(index) as! MyCollectionViewCell).status = 1
@@ -47,6 +47,7 @@ class MyPlaneCollectionViewControler: UICollectionViewController {
 //        }
         
         myPlane = myPlaneArray
+        myHearArray = headArray
         
         // 1. 开启一个图片的图形上下文
         UIGraphicsBeginImageContextWithOptions(collectionView!.frame.size, false, 0.0)
@@ -75,7 +76,7 @@ class MyPlaneCollectionViewControler: UICollectionViewController {
         for index in 0...80 {
             let indexPath = NSIndexPath(forItem: index, inSection: 0)
             (self.collectionView!.cellForItemAtIndexPath(indexPath) as! MyCollectionViewCell).status = 0
-            (self.collectionView!.cellForItemAtIndexPath(indexPath) as! MyCollectionViewCell).status = 0
+            (self.collectionView!.cellForItemAtIndexPath(indexPath) as! MyCollectionViewCell).hit = 0
         }
     }
     
@@ -86,50 +87,53 @@ class MyPlaneCollectionViewControler: UICollectionViewController {
         
         if attackCount == difficulty {
             
-            var k = myHearArray.count
-            if k == 0 {
-                myHearArray = headArray
-                k = myHearArray.count
-            }
+            (collectionView?.cellForItemAtIndexPath(myHearArray.last!) as! MyCollectionViewCell).hit = 1
+            myHearArray.removeLast()
             
-            (collectionView?.cellForItemAtIndexPath(myHearArray[k - 1]) as! MyCollectionViewCell).hit = 1
-            myHearArray.removeAtIndex(k - 1)
-            
-            if (k - 1) == 0 {
+            if myHearArray.count == 0 {
                 self.myPlaneDelegate?.result(false)
             }
             
         } else {
             
-            myHearArray = headArray
-            
             attackCount++
+            
             
             let firstPoint = Int(arc4random_uniform(75) + 3)
             
             let index = NSIndexPath(forItem: firstPoint, inSection: 0)
             
-            for indexPlane in myPlane {
+            if (collectionView?.cellForItemAtIndexPath(index) as! MyCollectionViewCell).hit == 0 {
                 
-                if indexPlane == index {
+                for indexPlane in myPlane {
                     
-                    (collectionView?.cellForItemAtIndexPath(index) as! MyCollectionViewCell).hit = 2
-                    break
-                } else {
-                    (collectionView?.cellForItemAtIndexPath(index) as! MyCollectionViewCell).hit = 3
+                    if indexPlane == index {
+                        
+                        (collectionView?.cellForItemAtIndexPath(index) as! MyCollectionViewCell).hit = 2
+                        break
+                    } else {
+                        (collectionView?.cellForItemAtIndexPath(index) as! MyCollectionViewCell).hit = 3
+                    }
+                    
                 }
                 
-            }
-            
-            
-            for head in headArray {
-                var j = 0
-                j++
-                if index == head {
-                    (collectionView?.cellForItemAtIndexPath(index) as! MyCollectionViewCell).hit = 1
-                    myHearArray.removeAtIndex(j - 1)
+                
+                for head in headArray {
+                    var j = 0
+                    j++
+                    if index == head {
+                        (collectionView?.cellForItemAtIndexPath(index) as! MyCollectionViewCell).hit = 1
+                        myHearArray.removeAtIndex(j - 1)
+                        if myHearArray.count == 0 {
+                            self.myPlaneDelegate?.result(false)
+                        }
+                    }
                 }
+                
+            } else {
+                solitaireGame(difficulty, headArray: headArray)
             }
+            
             
         }
         
