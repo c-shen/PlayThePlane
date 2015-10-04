@@ -24,6 +24,6 @@
 -----------------------------------  
 ![github](https://github.com/c-shen/PlayThePlane/blob/master/screenshot/3.png?raw=true "github")  
 
-外挂级难度,游戏结束
+击毁敌方三架飞机,或者被敌方击毁三架飞机游戏结束.
 -----------------------------------  
 ![github](https://github.com/c-shen/PlayThePlane/blob/master/screenshot/4.png?raw=true "github")  
