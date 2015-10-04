@@ -30,7 +30,7 @@ class MainController: UIViewController {
     private var attack = NSIndexPath?()
     private var difficulty = 0
     private var planeHeadFrame = CGRect()
-    let wa = UIScreen.mainScreen().bounds.height
+    let wa = UIScreen.mainScreen().bounds.width == 480 ? UIScreen.mainScreen().bounds.height - 50 : UIScreen.mainScreen().bounds.height
     
     
     override func viewDidLoad() {
@@ -44,7 +44,7 @@ class MainController: UIViewController {
     
     
     //MARK: 按钮方法
-    @objc func secedeGame() {
+    @objc func exitGame() {
         
         let alert = UIAlertController(title: "提示", message: "亲您确定要退出吗", preferredStyle: UIAlertControllerStyle.Alert)
         
@@ -123,7 +123,7 @@ class MainController: UIViewController {
                     firstPlane.removeAll()
                     secondPlane.removeAll()
                     thirdPlane.removeAll()
-                    
+                    headArray.removeAll()
 //                    switch plane {
 //                    case 2:
 //                        for index in firstPlane {
@@ -674,13 +674,13 @@ class MainController: UIViewController {
         
         enemyCollectionView.frame = CGRect(x: 0, y: 0, width: wa, height: wa)
         isMyP.view.frame = CGRect(x: wa, y: 0, width:wm , height: wm)
-        MyiAd.view.frame = CGRect(x: wa, y: wa - 30, width: wm, height: 30)
+        MyiAd.view.frame = CGRect(x: UIScreen.mainScreen().bounds.width == 480 ? 0 : wa, y: UIScreen.mainScreen().bounds.width == 480 ? wa + 20 : wa - 30, width: UIScreen.mainScreen().bounds.width == 480 ? wa : wm, height: 30)
         
         view.addSubview(imageView)
         view.addSubview(enemyCollectionView)
         view.addSubview(MyiAd.view)
         view.addSubview(isMyP.view)
-        view.addSubview(secede)
+        view.addSubview(exit)
         view.addSubview(selectDifficulty)
         view.addSubview(backout)
         view.addSubview(play)
@@ -688,19 +688,19 @@ class MainController: UIViewController {
         isMyP.view.hidden = true
         imageView.frame = isMyP.view.frame
         
-        let space = (wm - 60 * 4) / 5
-        secede.frame = CGRect(x: wa + space, y: wa - 70, width: 60, height: 40)
-        selectDifficulty.frame = CGRect(x: wa + 2 * space + 60, y: wa - 70, width: 60, height: 40)
-        backout.frame = CGRect(x: wa + 3 * space + 120, y: wa - 70, width: 60, height: 40)
-        play.frame = CGRect(x: wa + 4 * space + 180, y: wa - 70, width: 60, height: 40)
+        let space = UIScreen.mainScreen().bounds.width == 480 ? 0 : (wm - 60 * 4) / 5
+        exit.frame = CGRect(x: wa + space, y: UIScreen.mainScreen().bounds.width == 480 ? wa - 40 : wa - 70, width: UIScreen.mainScreen().bounds.width == 480 ?  wm/4 : 60, height: 40)
+        selectDifficulty.frame = CGRect(x: exit.frame.origin.x + exit.bounds.width + space, y: UIScreen.mainScreen().bounds.width == 480 ? wa - 40 : wa - 70, width: UIScreen.mainScreen().bounds.width == 480 ?  wm/4 : 60, height: 40)
+        backout.frame = CGRect(x: selectDifficulty.frame.origin.x + selectDifficulty.bounds.width + space, y: UIScreen.mainScreen().bounds.width == 480 ? wa - 40 : wa - 70, width: UIScreen.mainScreen().bounds.width == 480 ?  wm/4 : 60, height: 40)
+        play.frame = CGRect(x: backout.frame.origin.x + backout.bounds.width + space, y: UIScreen.mainScreen().bounds.width == 480 ? wa - 40 : wa - 70, width: UIScreen.mainScreen().bounds.width == 480 ?  wm/4 : 60, height: 40)
         
-        //        let dict = ["acv" : enemyCollectionView, "backout" : backout, "secede" : secede, "play" : play, "imageView" : imageView , "selectDifficulty" : selectDifficulty]
+        //        let dict = ["acv" : enemyCollectionView, "backout" : backout, "exit" : exit, "play" : play, "imageView" : imageView , "selectDifficulty" : selectDifficulty]
         //
-        //        secede.translatesAutoresizingMaskIntoConstraints = false
-        //        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[acv]-(10)-[secede(60)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: dict))
-        //        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[imageView]-10-[secede]-40-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: dict))
+        //        exit.translatesAutoresizingMaskIntoConstraints = false
+        //        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[acv]-(10)-[exit(60)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: dict))
+        //        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[imageView]-10-[exit]-40-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: dict))
         //        selectDifficulty.translatesAutoresizingMaskIntoConstraints = false
-        //        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[secede]-(20)-[selectDifficulty(60)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: dict))
+        //        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[exit]-(20)-[selectDifficulty(60)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: dict))
         //        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[imageView]-10-[selectDifficulty]-40-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: dict))
         //        backout.translatesAutoresizingMaskIntoConstraints = false
         //        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[selectDifficulty]-(10)-[backout(60)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: dict))
@@ -710,7 +710,7 @@ class MainController: UIViewController {
         //        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[imageView]-10-[play]-40-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: dict))
         
         selectDifficulty.addTarget(self, action: "selectDifficultyGame", forControlEvents: UIControlEvents.TouchUpInside)
-        secede.addTarget(self, action: "secedeGame", forControlEvents: UIControlEvents.TouchUpInside)
+        exit.addTarget(self, action: "exitGame", forControlEvents: UIControlEvents.TouchUpInside)
         backout.addTarget(self, action: "backoutGame", forControlEvents: UIControlEvents.TouchUpInside)
         play.addTarget(self, action: "playGame", forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -738,13 +738,13 @@ class MainController: UIViewController {
         for i in 0...9 {
             let blackView: UIView = UIView()
             view.addSubview(blackView)
-            blackView.frame = CGRect(x: CGFloat(i) * wm / 9 + wa, y: 0, width: 0.5, height: wm)
+            blackView.frame = CGRect(x: CGFloat(i) * wm / 9 + wa, y: 0, width: 1, height: wm)
             blackView.backgroundColor = UIColor.blackColor()
         }
         for i in 0...9  {
             let blackView: UIView = UIView()
             view.addSubview(blackView)
-            blackView.frame = CGRect(x: wa, y: CGFloat(i) * wm / 9, width: wm, height: 0.5)
+            blackView.frame = CGRect(x: wa, y: CGFloat(i) * wm / 9, width: wm, height: 1)
             blackView.backgroundColor = UIColor.blackColor()
         }
     }
@@ -763,10 +763,10 @@ class MainController: UIViewController {
     private lazy var enemyCollectionView: UICollectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: EmoticonLayout())
     private lazy var imageView: UIImageView = UIImageView()
     private lazy var MyiAd: iAdViewController = iAdViewController()
-    private lazy var secede: UIButton = UIButton(title: "退出", imageName: "btn2", fontSize: 15, width: 0 , height: 0, color: UIColor.whiteColor())
-    private lazy var selectDifficulty: UIButton = UIButton(title: "选择难度", imageName: "btn2", fontSize: 15, width: 0 , height: 0, color: UIColor.whiteColor())
-    private lazy var backout: UIButton = UIButton(title: "撤销", imageName: "btn2", fontSize: 15, width: 0 , height: 0, color: UIColor.whiteColor())
-    private lazy var play: UIButton = UIButton(title: "确定", imageName: "btn2", fontSize: 15, width: 0 , height: 0, color: UIColor.whiteColor())
+    private lazy var exit: UIButton = UIButton(title: "退出", imageName: "btn2", fontSize: UIScreen.mainScreen().bounds.width == 480 ? 12 : 15, width: 0 , height: 0, color: UIColor.whiteColor())
+    private lazy var selectDifficulty: UIButton = UIButton(title: "选择难度", imageName: "btn2", fontSize: UIScreen.mainScreen().bounds.width == 480 ? 12 : 15, width: 0 , height: 0, color: UIColor.whiteColor())
+    private lazy var backout: UIButton = UIButton(title: "撤销", imageName: "btn2", fontSize: UIScreen.mainScreen().bounds.width == 480 ? 12 : 15, width: 0 , height: 0, color: UIColor.whiteColor())
+    private lazy var play: UIButton = UIButton(title: "确定", imageName: "btn2", fontSize: UIScreen.mainScreen().bounds.width == 480 ? 12 : 15, width: 0 , height: 0, color: UIColor.whiteColor())
     //MARK:私有类方法
     private class EmoticonLayout: UICollectionViewFlowLayout {
         
