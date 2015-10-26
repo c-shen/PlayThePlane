@@ -69,7 +69,7 @@ class MainController: UIViewController {
         let alert = UIAlertController(title: "选择难度", message: "", preferredStyle: UIAlertControllerStyle.Alert)
         
         
-        alert.addAction(UIAlertAction(title: "菜鸟级", style: UIAlertActionStyle.Default, handler: { (_) -> Void in
+        alert.addAction(UIAlertAction(title: "新手", style: UIAlertActionStyle.Default, handler: { (_) -> Void in
             self.difficulty = 20
         }))
         
