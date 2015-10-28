@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E385581A266274D8584710D4E8501D44 /* PBXContainerItemProxy */ = {
+		3154272DEE4C40E4984614778E14DFB6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -224,7 +224,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				1035F5E470CEE10321B238F844E36E66 /* PBXTargetDependency */,
+				ED2578EBAF741CDEC53159DC94388883 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
@@ -309,11 +309,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1035F5E470CEE10321B238F844E36E66 /* PBXTargetDependency */ = {
+		ED2578EBAF741CDEC53159DC94388883 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SVProgressHUD;
 			target = A064B75A9838606659BB57FE5AC8A101 /* SVProgressHUD */;
-			targetProxy = E385581A266274D8584710D4E8501D44 /* PBXContainerItemProxy */;
+			targetProxy = 3154272DEE4C40E4984614778E14DFB6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

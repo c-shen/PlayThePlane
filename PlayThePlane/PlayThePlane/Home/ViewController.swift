@@ -28,6 +28,7 @@ class ViewController: UIViewController, UMSocialUIDelegate {
     }
     
     
+    
     @objc func shareGame() {
         
         UMSocialConfig.setSupportedInterfaceOrientations(UIInterfaceOrientationMask.Landscape)
